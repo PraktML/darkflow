@@ -48,9 +48,9 @@ def _batch(self, chunk):
     # Calculate placeholders' values
     probs = np.zeros([H*W,B,C])
     confs = np.zeros([H*W,B])
-    coord = np.zeros([H*W,B,4])
+    coord = np.zeros([H*W,B,16])    # Already adjusted
     proid = np.zeros([H*W,B,C])
-    prear = np.zeros([H*W,4])
+    prear = np.zeros([H*W,16])      # Already adjusted
     for obj in allobj:
         probs[obj[5], :, :] = [[0.]*C] * B
         probs[obj[5], :, labels.index(obj[0])] = 1.
