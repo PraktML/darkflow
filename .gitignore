@@ -44,3 +44,9 @@ ckpt/*
 
 #pytest cache
 .cache/
+
+# Libs
+*.so
+
+# Pascal VOC
+VOCdevkit/
